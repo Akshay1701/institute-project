@@ -1,0 +1,277 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>GO CAREER</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="default.css" />
+
+   
+   
+</head>
+
+
+<body>
+  
+
+<div id="outer">
+	<div id="outer2">
+	
+		<div id="header">
+                    <img src="logo final.png" style="margin-left:183px; width:1000px">
+                        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home2.jpg" style="width:100%; height:300px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home page first.jpg" style="width:100%; height:300px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home page last.jpg" style="width:100% ; height:300px;">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+		</div>
+	
+		<div id="menu">
+			<ul>
+				<li><a href="home.html">Logout</a></li>
+                                <li><a href="addfee.html">Add Fee</a></li>
+                               
+				<li><a href="addcourse.html">Add Institute Details</a></li>
+                                <li><a href="viewusers12.jsp">View Users</a></li>
+                                <li><a href="sendmsg.jsp">Send Messages</a></li>
+			</ul>
+               
+		</div>
+	
+		<div id="content">
+	
+			<div id="column1">
+				
+	
+                            <form method="post" action="addcourse.jsp" name="f" onsubmit="return fun()">
+              <table border="0" cellspacing="0" cellpadding="2" width="610">
+                  
+                  <tr>
+                      
+                      <td width="30" rowspan="2">&nbsp;</td>
+                      <td width="260" class="subHeader">ADD COURSE DETAILS HERE<br />
+                      <br />          </td>
+                  </tr>
+                  <tr>
+                      <td valign="top" class="bodyText"><table width="282" border="0">
+                               
+                              <tr>
+                                  <th width="104" scope="row">Address</th>
+                                  <td width="162"><input type="text" name="add1" /></td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">Director/Principal</th>
+                                  <td><textarea name="dp"></textarea></td>
+                              </tr>
+                               <tr>
+                                  <th scope="row">Contact no.</th>
+                                  <td><textarea name="cont"></textarea></td>
+                              </tr>
+                               <tr>
+                                  <th scope="row">Courses offered</th>
+                                  <td><textarea name="cour"></textarea></td>
+                              </tr>
+                               <tr>
+                                  <th scope="row">Affiliated from</th>
+                                  <td><textarea name="aft"></textarea></td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">Placements</th>
+                                  <td><textarea name="place"></textarea></td>
+                              </tr>
+                              
+                              <tr>
+                                  <th scope="row">Infrastructure</th>
+                                  <td><textarea name="infra"></textarea></td>
+                              </tr>
+                              
+                               <tr>
+                                  <th scope="row">Description</th>
+                                  <td><textarea name="des"></textarea></td>
+                              </tr>
+                              
+                              
+                              
+                              
+                              <tr align="center">
+                                  <th scope="row"><input name="" type="submit" value="Add" /></th>
+                                  <td><input name="" type="reset" value="Clear" /></td>
+                              </tr>
+                          </table>
+                      </td>
+                  </tr>
+              </table>
+          </form>
+
+
+<script type="text/javascript">
+    fuction fun()
+    {
+        var a=f.col_nm.value();
+        if(a.length==0)
+        {
+            alert("plz enter valid name");
+            f.col_nm.focus();
+            return false;
+        }
+         var b=f.add1.value();
+        if(b.length==0)
+        {
+            alert("plz enter valid address");
+            f.add1.focus();
+            return false;
+        }
+         var c=f.dp.value();
+        if(c.length==0)
+        {
+            alert("plz enter valid password");
+            f.dp.focus();
+            return false;
+        }
+         var d=f.cont.value();
+        if(d.length==0)
+        {
+            alert("plz enter valid age");
+            f.cont.focus();
+            return false;
+        }
+        
+         var e=f.cour.value();
+        if(e.length==0)
+        {
+            alert("plz enter valid gender");
+            f.cour.focus();
+            return false;
+        }
+        
+         var f1=f.aft.value();
+        if(f1.length==0)
+        {
+            alert("plz enter valid address");
+            f.aft.focus();
+            return false;
+        }
+        
+         var g=f.place.value();
+        if(g.length==0)
+        {
+            alert("plz enter valid phone number");
+            f.place.focus();
+            return false;
+        }
+        
+         var h=f.infra.value();
+        if(h.length==0)
+        {
+            alert("plz enter valid mail");
+            f.infra.focus();
+            return false;
+        }
+        
+          var i=f.des.value();
+        if(h.length==0)
+        {
+            alert("plz enter valid mail");
+            f.des.focus();
+            return false;
+        }
+        
+           var i=f.rank.value();
+        if(h.length==0)
+        {
+            alert("plz enter valid mail");
+            f.rank.focus();
+            return false;
+        }
+        
+        
+        
+        
+    }
+
+ 
+  
+    
+  </script>	
+				
+			</div>
+			
+			<div id="column2">
+				
+				
+				
+				
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+			
+		</div>
+		
+	</div>
+</div>
+
+</body>
+</html>

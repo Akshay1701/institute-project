@@ -1,0 +1,126 @@
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>GO CAREER</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link rel="stylesheet" type="text/css" href="default.css" />
+
+   
+   
+</head>
+
+
+<body>
+  
+
+<div id="outer">
+	<div id="outer2">
+	
+		<div id="header">
+                    <img src="logo final.png" style="margin-left:175px; width:1000px">
+                        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home2.jpg" style="width:100%; height:300px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home page first.jpg" style="width:100%; height:300px;">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="home page last.jpg" style="width:100% ; height:300px;">
+  <div class="text"></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+		</div>
+	
+		<div id="menu">
+			<ul>
+				<li><a href="home.html" id="hm">Home</a></li>
+				<li><a href="aboutus.html" id="ab">About Us</a></li>
+                                <li><a href="contact.jsp" id="con">Contact Us</a></li>
+				<li><a href="help.jsp" id="hl">Help</a></li>
+                                <li style="float:right;"><a href="admin.jsp">Login</a></li>
+                                <li style="float:right;"><a href="user_reg.jsp">Registration</a></li>
+			</ul>
+               
+		</div>
+	
+		<div id="content">
+	
+			<div id="column1" style="width:1000px;" >
+                            <center><p style="font-size:48px; color:#f4511e; font-family: Garamond;width:250px;height:20px;"><b>ABOUT US</b></p></center>
+                            <p style="color:white; font-family: Garamond; font-size:22px"><b>GoCareer is mainly focused on helping the students with their career decisions. Even the institute managers can advertise about their institution. This website shows various fields available after school and also graduation. The marked feature about our web application is that, here career plans not only means education but also other fields like sports and arts.
+Firstly, we provide all the courses available to the user. On selecting a certain course, the user will be given all the institutes which provide that particular course. This gives details about the course along with the institute details such as address, course duration, fee structure, etc. And for the institute manager, he can have the list of users and he can send messages to the user which will be like free platform to advertise. This system will bring all data in one place for students and help them to decide easily in a flash.
+                                </b></p>	
+		
+                            
+				
+				
+				
+				
+			</div>
+             
+		
+		<div id="footer">
+			
+		</div>
+		
+	</div>
+</div>
+
+</body>
+</html>
